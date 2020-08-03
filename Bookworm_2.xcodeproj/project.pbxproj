@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22CCE76524D7EF2000C2C1E7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CCE76424D7EF2000C2C1E7 /* DetailView.swift */; };
 		22D27C6D24D704D100078CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D27C6C24D704D100078CAB /* AppDelegate.swift */; };
 		22D27C6F24D704D100078CAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D27C6E24D704D100078CAB /* SceneDelegate.swift */; };
 		22D27C7224D704D100078CAB /* Bookworm_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22D27C7024D704D100078CAB /* Bookworm_2.xcdatamodeld */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22CCE76424D7EF2000C2C1E7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		22D27C6924D704D100078CAB /* Bookworm_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookworm_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D27C6C24D704D100078CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22D27C6E24D704D100078CAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				22D27C6E24D704D100078CAB /* SceneDelegate.swift */,
 				22D27C8924D7176F00078CAB /* EmojiRatingView.swift */,
 				22D27C8724D7133000078CAB /* RatingView.swift */,
+				22CCE76424D7EF2000C2C1E7 /* DetailView.swift */,
 				22D27C8524D7075100078CAB /* AddBookView.swift */,
 				22D27C7324D704D100078CAB /* ContentView.swift */,
 				22D27C7524D704D300078CAB /* Assets.xcassets */,
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22D27C7224D704D100078CAB /* Bookworm_2.xcdatamodeld in Sources */,
+				22CCE76524D7EF2000C2C1E7 /* DetailView.swift in Sources */,
 				22D27C6D24D704D100078CAB /* AppDelegate.swift in Sources */,
 				22D27C8A24D7176F00078CAB /* EmojiRatingView.swift in Sources */,
 				22D27C7424D704D100078CAB /* ContentView.swift in Sources */,
