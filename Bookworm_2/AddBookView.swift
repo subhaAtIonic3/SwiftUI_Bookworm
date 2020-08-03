@@ -16,6 +16,7 @@ struct AddBookView: View {
     @State private var rating = 3
     @State private var genre = ""
     @State private var review = ""
+    @State private var showAlert = false
     let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
     
     var body: some View {
@@ -39,19 +40,28 @@ struct AddBookView: View {
                 
                 Section {
                     Button("Save") {
-                        let bookData = Book(context: self.moc)
-                        bookData.title = self.title
-                        bookData.author = self.author
-                        bookData.genre = self.genre
-                        bookData.rating = Int16(self.rating)
-                        bookData.review = self.review
-                        
-                        try? self.moc.save()
-                        self.presentationMode.wrappedValue.dismiss()
+                        if self.genre.count == 0 {
+                            self.showAlert = true
+                            return
+                        } else {
+                            let bookData = Book(context: self.moc)
+                            bookData.title = self.title
+                            bookData.author = self.author
+                            bookData.genre = self.genre
+                            bookData.rating = Int16(self.rating)
+                            bookData.review = self.review
+                            bookData.date = Date()
+                            
+                            try? self.moc.save()
+                            self.presentationMode.wrappedValue.dismiss()
+                        }
                     }
                 }
             }
-        .navigationBarTitle("Add Book")
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("Error!"), message: Text("Please select the genre"), dismissButton: .default(Text("OK")))
+            }
+            .navigationBarTitle("Add Book")
         }
     }
 }

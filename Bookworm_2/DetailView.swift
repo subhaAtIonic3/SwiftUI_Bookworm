@@ -23,6 +23,12 @@ struct DetailView: View {
         presentationMode.wrappedValue.dismiss()
     }
     
+    func formattedDate(date: Date) -> String {
+        let formattedDate = DateFormatter()
+        formattedDate.dateFormat = "HH:mm E, d MMM y"
+        return formattedDate.string(from: date)
+    }
+    
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -41,6 +47,8 @@ struct DetailView: View {
                 Text(self.book.author ?? "Unknown author")
                     .font(.title)
                     .foregroundColor(.secondary)
+                
+                Text(self.formattedDate(date: self.book.date ?? Date()))
                 
                 Text(self.book.review ?? "No review")
                     .padding()
